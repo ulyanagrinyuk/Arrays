@@ -356,7 +356,6 @@ int Avg(double arr[ROWS][COLS], double ROWS, double COLS)
 	return(double)Sum(arr, ROWS, COLS) / (ROWS * COLS);
 }
 
-
 int minValueIn(const int arr[], const int n)
 {
 	int min = arr[0];
