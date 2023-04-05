@@ -502,7 +502,7 @@ void shiftLeft(int arr[], const int n, int number_of_shifts)
 }
 void shiftLeft(int arr[ROWS][COLS], const int ROWS, int COLS, int number_of_shifts)
 {
-	shiftLeft(arr, ROWS, COLS, ROWS * COLS - number_of_shifts);
+	
 }
 void shiftLeft(double arr[ROWS][COLS], const int ROWS, int COLS, int number_of_shifts)
 {
