@@ -89,7 +89,6 @@ void main()
 
 
 
-
 void Sort(double arr[ROWS][COLS], double ROWS, double COLS)
 {
 	for (int i = 0; i < ROWS; i++)
@@ -114,8 +113,44 @@ void Sort(double arr[ROWS][COLS], double ROWS, double COLS)
 	}
 	
 }
-
-
+void Sort(char arr[ROWS][COLS], char ROWS, char COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; k < COLS; k++)
+				{
+					char buffer;
+					if (arr[i][j] > arr[k][l])
+					{
+						buffer = arr[i][j];
+						arr[i][j] = arr[k][l];
+						arr[k][l] = buffer;
+					}
+				}
+			}
+		}
+	}
+}
+void Sort(double arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			double buffer = 0;
+			if (arr[j] < arr[i])
+			{
+				buffer = arr[j];
+				arr[j] = arr[i];
+				arr[i] = buffer;
+			}
+		}
+	}
+}
 
 
 
