@@ -13,20 +13,14 @@
 
 
 
-//void shiftRight(int arr[], const int n, int number_of_shifts);
 
 
-//void Sort(double arr[ROWS][COLS], double ROWS, double COLS);
-//void Sort(char arr[ROWS][COLS], char ROWS, char COLS);
-//void Sort(double arr[], const int n);
-
-//void shiftLeft(int arr[ROWS][COLS], const int ROWS, int COLS, int number_of_shifts);
+void Sort(double arr[ROWS][COLS], double ROWS, double COLS);
+void Sort(char arr[ROWS][COLS], char ROWS, char COLS);
+void Sort(double arr[], const int n);
 
 
-//void shiftRight(double arr[], const int n, int number_of_shifts);
-//void shiftRight(char arr[], const int n, int number_of_shifts);
-//void shiftRight(char arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shifts);
-//void shiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shifts);
+
 
 //void UniqueRand(char arr[ROWS][COLS], char ROWS, char COLS);
 
@@ -96,68 +90,33 @@ void main()
 
 
 
+void Sort(double arr[ROWS][COLS], double ROWS, double COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				for (int l = k == i ? j + 1 : 0; l < COLS; l++)
+				{
+					double buffer;
+					if (arr[i][j] > arr[k][l])
+					{
+						buffer = arr[i][j];
+						arr[i][j] = arr[k][l];
+						arr[k][l] = buffer;
+					}
+					
+				}
+			}
+		}
+	}
+	
+}
 
 
 
 
 
-
-
-
-
-
-
-
-//void shiftLeft(int arr[ROWS][COLS], const int ROWS, int COLS, int number_of_shifts)
-//{
-//	
-//}
-
-//void shiftRight(int arr[], const int n, int number_of_shifts)
-//{
-//	/*for (int i = 0; i < number_of_shifts; i++)
-//	{
-//		int buffer = arr[n - 1];
-//		for (int i = n - 1; i > 0; i--)
-//		{
-//			arr[i] = arr[i - 1];
-//		}
-//		arr[0] = buffer;
-//	}*/
-//	shiftLeft(arr, n, n - number_of_shifts);
-//
-//}
-//void shiftRight(double arr[], const int n, int number_of_shifts)
-//{
-//	
-//}
-//void shiftRight(char arr[], const int n, int number_of_shifts)
-//{
-//	
-//}
-//void shiftRight(char arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shifts)
-//{
-//	
-//}
-//void shiftRight(double arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shifts)
-//{
-//	
-//}
-
-//void Sort(double arr[], const int n)
-//{
-//	for (int i = 0; i < n; i++)
-//	{
-//		for (int j = 0; j < n; j++)
-//		{
-//			if (arr[j] < arr[i])
-//			{
-//				arr[i] ^= arr[j];
-//				arr[j] ^= arr[i];
-//				arr[i] ^= arr[j];
-//			}
-//
-//		}
-//	}
-//}
 
