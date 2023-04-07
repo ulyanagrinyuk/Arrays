@@ -15,18 +15,6 @@
 
 
 
-
-
-
-
-
-//void UniqueRand(char arr[ROWS][COLS], char ROWS, char COLS);
-
-//void UniqueRand(double arr[ROWS][COLS], const int ROWS,const int COLS);
-
-
-
-
 //#defiine ARRAYS_1
 #define ARRAYS_2
 
@@ -84,9 +72,6 @@ void main()
 	Sum(c_arr_2, ROWS, COLS);
 
 }
-
-
-
 
 
 
